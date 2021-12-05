@@ -11,7 +11,71 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
     <body>
-      <h1>Browser Template</h1>
+      <h1>Roll My Character</h1>
+      <section id="before-sign-in">
+        <form id="sign-up" class="border">
+          <fieldset>
+            <legend>Sign Up</legend>
+            <input type="email" name="credentials[email]" placeholder="Email Address" required>
+            <input type="password" name="credentials[password]" placeholder="Password" required>
+            <input type="password" name="credentials[password_confirmation" placeholder="Password Confirmation" required>
+            <button class="btn btn-primary">Sign Me Up</button>
+          </fieldset>
+        </form>
+        <hr>
+
+        <form id="sign-in" class="border">
+          <fieldset>
+            <legend>Sign In</legend>
+            <input type="email" name="credentials[email]" placeholder="Email Address" required>
+            <input type="password" name="credentials[password]" placeholder="Password" required>
+            <button class="btn btn-primary">Sign In</button>
+          </fieldset>
+        </form>
+      </section>
+      <hr>
+
+      <section id="after-sign-in">
+        <button class="btn btn-danger">Sign Out</button>
+        <hr>
+
+        <form id="character-creation" class="border">
+          <fieldset>
+            <legend>Create a Character</legend>
+            <input type="text" name="character[name]" placeholder="Character Name" required>
+            <input type="text" name="character[race]" placeholder="Character Race" required>
+            <input type="text" name="character[class]" placeholder="Character Class" required>
+            <button class="btn btn-primary">Create</button>
+          </fieldset>
+        </form>
+        <hr>
+
+        <form id="character-update" class="border">
+          <fieldset>
+            <legend>Update A Character</legend>
+            <input type="text" name="character[_id]" placeholder="Character ID" required>
+            <input type="text" name="character[name]" placeholder="Character Name" required>
+            <input type="text" name="character[race]" placeholder="Character Race" required>
+            <input type="text" name="character[class]" placeholder="Character Class" required>
+            <button class="btn btn-primary">Update</button>
+          </fieldset>
+        </form>
+        <hr>
+
+        <form id="character-delete" class="border">
+          <fieldset>
+            <legend>Delete A Character</legend>
+            <input type="text" name="character[_id]" placeholder="Character ID" required>
+            <button class="btn btn-danger">Delete Character</button>
+          </fieldset>
+        </form>
+      </section>
+      <hr>
+
+      <section id="user-feedback">
+
+      </section>
     </body>
 </html>
