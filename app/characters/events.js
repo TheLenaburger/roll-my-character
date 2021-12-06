@@ -22,7 +22,7 @@ const onShowCharacter = (event) => {
   event.preventDefault()
 
   const formData = getFormFields(event.target)
-  const id = formData.character.id
+  const id = formData.character._id
 
   api.show(id)
     .then(ui.onShowCharacterSuccess)
@@ -33,7 +33,7 @@ const onUpdateCharacter = (event) => {
   event.preventDefault()
 
   const formData = getFormFields(event.target)
-  const id = formData.character.id
+  const id = formData.character._id
 
   api.update(id, formData)
     .then(ui.onUpdateCharacterSuccess)
@@ -44,7 +44,7 @@ const onDeleteCharacter = (event) => {
   event.preventDefault()
 
   const formData = getFormFields(event.target)
-  const id = formData.character.id
+  const id = formData.character._id
 
   api.destroy(id)
     .then(ui.onDeleteCharacterSuccess)

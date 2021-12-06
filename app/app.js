@@ -11,7 +11,7 @@ $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('click', authEvents.onSignOut)
-  $('#create-character').on('submit', characterEvents.onCreateCharacter)
+  $('#character-creation').on('submit', characterEvents.onCreateCharacter)
   $('#show-all-characters').on('click', characterEvents.onIndexCharacters)
   $('#show-character').on('submit', characterEvents.onShowCharacter)
   $('#update-character').on('submit', characterEvents.onUpdateCharacter)
