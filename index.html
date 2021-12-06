@@ -52,6 +52,17 @@
         </form>
         <hr>
 
+        <button id="show-all-characters" class="btn btn-primary">Show All Characters</button>
+        <hr>
+
+        <form id="show-character" class="border">
+          <fieldset>
+            <legend>Show One Character</legend>
+            <input type="text" name="character[_id]" placeholder="Character ID" required>
+            <button class="btn btn-primary">Show Character</button>
+          </fieldset>
+        </form>
+
         <form id="character-update" class="border">
           <fieldset>
             <legend>Update A Character</legend>
@@ -74,8 +85,9 @@
       </section>
       <hr>
 
-      <section id="user-feedback">
+      <div id="user-feedback"></div>
 
-      </section>
+      <div id="character-display"></div>
+
     </body>
 </html>
