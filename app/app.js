@@ -4,6 +4,7 @@
 // const example = require('./example')
 const authEvents = require('./auth/events')
 const characterEvents = require('./characters/events')
+
 // use require without a reference to ensure a file is bundled
 // require('./example')
 

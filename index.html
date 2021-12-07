@@ -14,25 +14,29 @@
     <body>
 
       <section id="before-sign-in">
-        <div class="container" id="home-screen">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-8 align-items-center">
+        <div class="container-fluid" id="home-screen">
+          <div class="row text-center justify-content-center">
+            <div class="col-12">
               <h1>Roll My Character</h1>
               <h4>Sign in or create a new account to get started, adventurer!</h4>
+            </div>
+            <hr>
 
-              <form id="sign-up" class="border">
+            <div class="row justify-content-center">
+              <div class="col-s-12 col-4 p-6">
+              <form id="sign-up">
                 <fieldset>
-                  <legend>Sign Up</legend>
+                  <legend>Create New Account</legend>
                   <input type="email" name="credentials[email]" placeholder="Email Address" required>
                   <input type="password" name="credentials[password]" placeholder="Password" required>
                   <input type="password" name="credentials[password_confirmation" placeholder="Password Confirmation" required>
                   <button class="btn btn-primary">Sign Me Up</button>
                 </fieldset>
               </form>
+              </div>
 
-              <hr>
-
-              <form id="sign-in" class="border">
+              <div class="col-xs-12 col-4 p-2">
+              <form id="sign-in">
                 <fieldset>
                   <legend>Sign In</legend>
                   <input type="email" name="credentials[email]" placeholder="Email Address" required>
@@ -40,7 +44,7 @@
                   <button class="btn btn-primary">Sign In</button>
                 </fieldset>
               </form>
-
+              </div>
             </div>
           </div>
         </div>
@@ -72,13 +76,25 @@
         </div>
       </nav>
 
-        <form id="character-creation" class="border">
+        <form id="character-creation" class="container">
           <fieldset>
             <legend>Create a Character</legend>
-            <input type="text" name="character[name]" placeholder="Character Name" required>
-            <input type="text" name="character[race]" placeholder="Character Race" required>
-            <input type="text" name="character[class]" placeholder="Character Class" required>
-            <button class="btn btn-primary">Create</button>
+            <hr>
+              <div class="tab" id="formOne"> Name Your Character:
+                <input type="text" name="character[name]" placeholder="Character Name" required>
+                <div class="btn-box">
+                  <button class="btn btn-primary">Next</button>
+                </div>
+              </div>
+
+              <div class="tab" id="formTwo">Choose Your Race:
+                <input type="text" name="character[race]" placeholder="Character Race" required>
+              </div>
+
+              <div class="tab" id="formThree">Choose Your Class:
+                <input type="text" name="character[class]" placeholder="Character Class" required>
+              </div>
+
           </fieldset>
         </form>
         <hr>
