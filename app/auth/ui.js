@@ -1,14 +1,16 @@
 const store = require('../store')
 
+const removeFeedback = function () {
+  setTimeout(() => {
+    $('#user-feedback').removeClass().text('')
+  }, 5000)
+}
+
 const onError = function (error) {
   $('#user-feedback').text('There was an error handling that request. Please check your inputs and try again.')
   $('#user-feedback').addClass('text-danger')
 
-  setTimeout(() => {
-    $('#user-feedback').removeClass('text-danger')
-    $('#user-feedback').text('')
-  }, 5000)
-
+  removeFeedback()
   console.error(error)
 }
 
@@ -21,11 +23,10 @@ const signInSuccess = function (responseData) {
   $('form').trigger('reset')
 
   // updates ui: hiding sign up/in functions and revealing the major functionality
+  $('#before-sign-in').hide(1000)
+  $('#after-sign-in').show(1000)
 
-  // removes the pop-up message letting user know they've signed in after a 5 sec delay
-  setTimeout(() => {
-    $('#user-feedback').removeClass('text-success').text('')
-  }, 5000)
+  removeFeedback()
 }
 
 const signOutSuccess = function () {
@@ -33,10 +34,10 @@ const signOutSuccess = function () {
   $('form').trigger('reset')
 
   // reset ui, hiding all authorized functionality and showing the login/sign up forms
+  $('#after-sign-in').hide(1000)
+  $('#before-sign-in').show(1000)
 
-  setTimeout(() => {
-    $('#user-feedback').removeClass('text-success').text('')
-  }, 5000)
+  removeFeedback()
 }
 
 module.exports = {

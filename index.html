@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Roll My Character</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -11,35 +11,66 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-
     <body>
-      <h1>Roll My Character</h1>
-      <section id="before-sign-in">
-        <form id="sign-up" class="border">
-          <fieldset>
-            <legend>Sign Up</legend>
-            <input type="email" name="credentials[email]" placeholder="Email Address" required>
-            <input type="password" name="credentials[password]" placeholder="Password" required>
-            <input type="password" name="credentials[password_confirmation" placeholder="Password Confirmation" required>
-            <button class="btn btn-primary">Sign Me Up</button>
-          </fieldset>
-        </form>
-        <hr>
 
-        <form id="sign-in" class="border">
-          <fieldset>
-            <legend>Sign In</legend>
-            <input type="email" name="credentials[email]" placeholder="Email Address" required>
-            <input type="password" name="credentials[password]" placeholder="Password" required>
-            <button class="btn btn-primary">Sign In</button>
-          </fieldset>
-        </form>
+      <section id="before-sign-in">
+        <div class="container" id="home-screen">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-8 align-items-center">
+              <h1>Roll My Character</h1>
+              <h4>Sign in or create a new account to get started, adventurer!</h4>
+
+              <form id="sign-up" class="border">
+                <fieldset>
+                  <legend>Sign Up</legend>
+                  <input type="email" name="credentials[email]" placeholder="Email Address" required>
+                  <input type="password" name="credentials[password]" placeholder="Password" required>
+                  <input type="password" name="credentials[password_confirmation" placeholder="Password Confirmation" required>
+                  <button class="btn btn-primary">Sign Me Up</button>
+                </fieldset>
+              </form>
+
+              <hr>
+
+              <form id="sign-in" class="border">
+                <fieldset>
+                  <legend>Sign In</legend>
+                  <input type="email" name="credentials[email]" placeholder="Email Address" required>
+                  <input type="password" name="credentials[password]" placeholder="Password" required>
+                  <button class="btn btn-primary">Sign In</button>
+                </fieldset>
+              </form>
+
+            </div>
+          </div>
+        </div>
       </section>
-      <hr>
 
       <section id="after-sign-in">
-        <button id="sign-out" class="btn btn-danger">Sign Out</button>
-        <hr>
+
+      <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Roll My Character</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Account Actions
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Change Password</a>
+                  <a class="dropdown-item" id="sign-out" href="#">Log Out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
         <form id="character-creation" class="border">
           <fieldset>
