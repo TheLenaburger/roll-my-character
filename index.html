@@ -75,16 +75,13 @@
           </div>
         </div>
       </nav>
-
-        <form id="character-creation" class="container">
+      <div class="container-fluid">
+        <form id="character-creation">
           <fieldset>
-            <legend>Create a Character</legend>
+            <legend>Create a New Character</legend>
             <hr>
               <div class="tab" id="formOne"> Name Your Character:
                 <input type="text" name="character[name]" placeholder="Character Name" required>
-                <div class="btn-box">
-                  <button class="btn btn-primary">Next</button>
-                </div>
               </div>
 
               <div class="tab" id="formTwo">Choose Your Race:
@@ -94,10 +91,11 @@
               <div class="tab" id="formThree">Choose Your Class:
                 <input type="text" name="character[class]" placeholder="Character Class" required>
               </div>
+              <button class="btn btn-primary">Create Character</button>
 
           </fieldset>
         </form>
-        <hr>
+      </div>
 
         <button id="show-all-characters" class="btn btn-primary">Show All Characters</button>
         <hr>
