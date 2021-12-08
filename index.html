@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Roll My Character</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <section id="before-sign-in">
+        <div class="container-fluid" id="home-screen">
+          <div class="row text-center justify-content-center">
+            <div class="col-12">
+              <h1>Roll My Character</h1>
+              <h4>Sign in or create a new account to get started, adventurer!</h4>
+            </div>
+            <hr>
+
+            <div class="row justify-content-center">
+              <div class="col-s-12 col-4 p-6">
+              <form id="sign-up">
+                <fieldset>
+                  <legend>Create New Account</legend>
+                  <input type="email" name="credentials[email]" placeholder="Email Address" required>
+                  <input type="password" name="credentials[password]" placeholder="Password" required>
+                  <input type="password" name="credentials[password_confirmation" placeholder="Password Confirmation" required>
+                  <button class="btn btn-primary">Sign Me Up</button>
+                </fieldset>
+              </form>
+              </div>
+
+              <div class="col-xs-12 col-4 p-2">
+              <form id="sign-in">
+                <fieldset>
+                  <legend>Sign In</legend>
+                  <input type="email" name="credentials[email]" placeholder="Email Address" required>
+                  <input type="password" name="credentials[password]" placeholder="Password" required>
+                  <button class="btn btn-primary">Sign In</button>
+                </fieldset>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="after-sign-in">
+
+      <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Roll My Character</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Account Actions
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" id="sign-out" href="#">Log Out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <form id="character-creation">
+          <fieldset>
+            <legend>Create a New Character</legend>
+            <hr>
+              <div class="tab" id="formOne"> Name Your Character:
+                <input type="text" name="character[name]" placeholder="Character Name" required>
+              </div>
+
+              <div class="tab" id="formTwo">Choose Your Race:
+                <input type="text" name="character[race]" placeholder="Character Race" required>
+              </div>
+
+              <div class="tab" id="formThree">Choose Your Class:
+                <input type="text" name="character[class]" placeholder="Character Class" required>
+              </div>
+              <button class="btn btn-primary">Create Character</button>
+
+          </fieldset>
+        </form>
+      </div>
+
+        <button id="show-all-characters" class="btn btn-primary">Show All Characters</button>
+        <hr>
+
+        <form id="show-character" class="border">
+          <fieldset>
+            <legend>Show One Character</legend>
+            <input type="text" name="character[_id]" placeholder="Character ID" required>
+            <button class="btn btn-primary">Show Character</button>
+          </fieldset>
+        </form>
+
+        <form id="update-character" class="border">
+          <fieldset>
+            <legend>Update A Character</legend>
+            <input type="text" name="character[_id]" placeholder="Character ID" required>
+            <input type="text" name="character[name]" placeholder="Character Name" required>
+            <input type="text" name="character[race]" placeholder="Character Race" required>
+            <input type="text" name="character[class]" placeholder="Character Class" required>
+            <button class="btn btn-primary">Update</button>
+          </fieldset>
+        </form>
+        <hr>
+
+        <form id="delete-character" class="border">
+          <fieldset>
+            <legend>Delete A Character</legend>
+            <input type="text" name="character[_id]" placeholder="Character ID" required>
+            <button class="btn btn-danger">Delete Character</button>
+          </fieldset>
+        </form>
+      </section>
+      <hr>
+
+      <div id="user-feedback"></div>
+
+      <div id="character-display"></div>
+
+    </body>
+</html>

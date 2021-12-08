@@ -1,0 +1,29 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  margin-top: 5rem;
+  background-image: url("https://wallpaperaccess.com/full/2796640.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#after-sign-in {
+  display: none
+}
+
+#home-screen, #character-creation {
+  text-align: center;
+  margin: 10% auto;
+  border: 1px solid gray;
+  box-shadow: 5px 8px 10px gray;
+  background-image: url("https://i2.wp.com/dndduet.com/wp-content/uploads/2019/02/Stream-Art-YouTube-Banner.jpg?resize=1024%2C576&ssl=1");
+  background-size: cover;
+  height: 75vh;
+  min-width: 360px;
+  position: relative;
+}
+
+.tab {
+  margin-bottom: 10px;
+}
