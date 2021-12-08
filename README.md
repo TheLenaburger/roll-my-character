@@ -4,9 +4,9 @@ This application allows the user to create and save characters for D&D Fifth Edi
 
 ## Important Links
 
-- [Other Repo](www.link.com)
-- [Deployed API](www.link.com)
-- [Deployed Client](www.link.com)
+- [Other Repo](https://github.com/TheLenaburger/roll-my-character-api)
+- [Deployed API](https://arcane-river-21865.herokuapp.com/)
+- [Deployed Client](https://thelenaburger.github.io/roll-my-character/)
 
 ## Planning Story
 
